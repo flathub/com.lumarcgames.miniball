@@ -1,0 +1,32 @@
+app-id: com.lumarcgames.miniball
+runtime: org.freedesktop.Platform
+runtime-version: "23.08"
+sdk: org.freedesktop.Sdk
+command: miniball
+finish-args:
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --share=network
+  - --device=dri
+
+modules:
+  - name: miniball
+    buildsystem: simple
+    build-commands:
+      - ls -laR
+      - install -D miniball.x86_64 /app/bin/miniball
+      - install -D com.lumarcgames.miniball.desktop /app/share/applications/com.lumarcgames.miniball.desktop
+      - install -D com.lumarcgames.miniball.metainfo.xml /app/share/metainfo/com.lumarcgames.miniball.metainfo.xml
+      - install -D icon-128.png /app/share/icons/hicolor/128x128/apps/com.lumarcgames.miniball.png
+    sources:
+      - type: archive
+        url: https://github.com/lumarcgames/miniball-releases/releases/download/v1.0.0/miniball.x86_64.tar.xz
+        sha256: d824ed0c313b2ba60b8803645e13276d0383d261a9d469ea4a164318d595f176
+      - type: file
+        path: com.lumarcgames.miniball.desktop
+      - type: file
+        path: com.lumarcgames.miniball.metainfo.xml
+      - type: file
+        path: icon-128.png
