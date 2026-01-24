@@ -17,6 +17,7 @@ modules:
     build-commands:
       - ls -laR
       - install -D miniball.x86_64 /app/bin/miniball
+      - install -D libwebrtc_native.linux.template_release.x86_64.so /app/bin/libwebrtc_native.linux.template_release.x86_64.so
       - install -D com.lumarcgames.miniball.desktop /app/share/applications/com.lumarcgames.miniball.desktop
       - install -D com.lumarcgames.miniball.metainfo.xml /app/share/metainfo/com.lumarcgames.miniball.metainfo.xml
       - install -D icon-128.png /app/share/icons/hicolor/128x128/apps/com.lumarcgames.miniball.png
