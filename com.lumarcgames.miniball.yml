@@ -35,7 +35,7 @@ modules:
 
       - type: file
         url: https://raw.githubusercontent.com/lumarcgames/miniball-releases/main/com.lumarcgames.miniball.metainfo.xml
-        sha256: 101b6b847019f7217df7f2e58bca65604b04e579d97b97dbc2979f03fce46693
+        sha256: bd1269e5f573b8f0a3b452ed825978fee9dce80dc593050308c7a065920de3cf
 
       - type: file
         url: https://raw.githubusercontent.com/lumarcgames/miniball-releases/main/icon-128.png
