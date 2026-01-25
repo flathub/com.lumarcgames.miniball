@@ -1,7 +1,9 @@
 app-id: com.lumarcgames.miniball
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
+base: org.godotengine.godot.BaseApp
+base-version: "4.5.1"
 command: miniball
 finish-args:
   - --share=ipc
@@ -15,19 +17,25 @@ modules:
   - name: miniball
     buildsystem: simple
     build-commands:
-      - ls -laR
-      - install -D miniball.x86_64 /app/bin/miniball
-      - install -D libwebrtc_native.linux.template_release.x86_64.so /app/bin/libwebrtc_native.linux.template_release.x86_64.so
-      - install -D com.lumarcgames.miniball.desktop /app/share/applications/com.lumarcgames.miniball.desktop
-      - install -D com.lumarcgames.miniball.metainfo.xml /app/share/metainfo/com.lumarcgames.miniball.metainfo.xml
-      - install -D icon-128.png /app/share/icons/hicolor/128x128/apps/com.lumarcgames.miniball.png
+      - install -Dm755 miniball.x86_64 /app/bin/miniball
+      - install -Dm644 miniball.pck /app/bin/miniball.pck
+      - install -Dm644 libwebrtc_native.linux.template_release.x86_64.so /app/bin/libwebrtc_native.linux.template_release.x86_64.so
+      - install -Dm644 com.lumarcgames.miniball.desktop /app/share/applications/com.lumarcgames.miniball.desktop
+      - install -Dm644 com.lumarcgames.miniball.metainfo.xml /app/share/metainfo/com.lumarcgames.miniball.metainfo.xml
+      - install -Dm644 icon-128.png /app/share/icons/hicolor/128x128/apps/com.lumarcgames.miniball.png
     sources:
       - type: archive
         url: https://github.com/lumarcgames/miniball-releases/releases/download/v1.0.0/miniball.x86_64.tar.xz
-        sha256: d824ed0c313b2ba60b8803645e13276d0383d261a9d469ea4a164318d595f176
+        sha256: 3d4bfb29acd4d4f8add039157fc6bb931e5211d76ddf3c5089c78d55bb485e80
+
       - type: file
-        path: com.lumarcgames.miniball.desktop
+        url: https://raw.githubusercontent.com/lumarcgames/miniball-releases/main/com.lumarcgames.miniball.desktop
+        sha256: d9df096e37036f2043481ffaeaa139ec5ef96b7a671e12b9fa9db2fa7c6110dd
+
       - type: file
-        path: com.lumarcgames.miniball.metainfo.xml
+        url: https://raw.githubusercontent.com/lumarcgames/miniball-releases/main/com.lumarcgames.miniball.metainfo.xml
+        sha256: 101b6b847019f7217df7f2e58bca65604b04e579d97b97dbc2979f03fce46693
+
       - type: file
-        path: icon-128.png
+        url: https://raw.githubusercontent.com/lumarcgames/miniball-releases/main/icon-128.png
+        sha256: 050f00acd2fd215c3463f0444cb286a766aa67e9b882ad8e68fa095a016b81a2
