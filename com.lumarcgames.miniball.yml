@@ -17,7 +17,6 @@ modules:
   - name: miniball
     buildsystem: simple
     build-commands:
-      - tar -xJf miniball.*.tar.xz
       - install -Dm755 miniball.*64 /app/bin/miniball
       - install -Dm644 miniball.pck /app/bin/miniball.pck
       - install -Dm644 libwebrtc_native.linux.template_release.*.so /app/bin/
@@ -25,12 +24,14 @@ modules:
       - install -Dm644 com.lumarcgames.miniball.metainfo.xml /app/share/metainfo/com.lumarcgames.miniball.metainfo.xml
       - install -Dm644 icon-128.png /app/share/icons/hicolor/128x128/apps/com.lumarcgames.miniball.png
     sources:
-      - type: file
+      - type: archive
         only-arches: [x86_64]
         url: https://github.com/lumarcgames/miniball-releases/releases/download/v1.0.0/miniball.x86_64.tar.xz
-        sha256: ec4cd9bf5928a6e2db7d699e9a648dc02e98e15acd8171502ad48ad90cb0d766
+        sha256: 6111a869740cb2dd0c2b3862e25750c0ad664238a6e684d957b9e9449fa4715f
+        strip-components: 0
 
-      - type: file
+      - type: archive
         only-arches: [aarch64]
         url: https://github.com/lumarcgames/miniball-releases/releases/download/v1.0.0/miniball.arm64.tar.xz
-        sha256: 8c997bc809343a0934cc5529b27cbd8dbb2ee3969a116d54748902a359a77336
+        sha256: 38d131cd850d1f7cdc96a794c9b9f5b54516f8435e4e1c111d9180bf882acbae
+        strip-components: 0
