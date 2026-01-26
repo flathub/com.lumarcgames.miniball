@@ -27,11 +27,11 @@ modules:
       - type: archive
         only-arches: [x86_64]
         url: https://github.com/lumarcgames/miniball-releases/releases/download/v1.0.0/miniball.x86_64.tar.xz
-        sha256: 6111a869740cb2dd0c2b3862e25750c0ad664238a6e684d957b9e9449fa4715f
+        sha256: 187ecd1ef0e8b85ac90ce52920aa191cf00354cdccd121ffd8357d27e9889b3e
         strip-components: 0
 
       - type: archive
         only-arches: [aarch64]
         url: https://github.com/lumarcgames/miniball-releases/releases/download/v1.0.0/miniball.arm64.tar.xz
-        sha256: 38d131cd850d1f7cdc96a794c9b9f5b54516f8435e4e1c111d9180bf882acbae
+        sha256: b941ba1a55b01e4c7c4bdf80072b7b6c8d43502dc33eca255cf50ff8709b1d9d
         strip-components: 0
