@@ -3,7 +3,7 @@ runtime: org.freedesktop.Platform
 runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 base: org.godotengine.godot.BaseApp
-base-version: "4.5"
+base-version: "4.6.1"
 command: miniball
 finish-args:
   - --share=ipc
@@ -26,12 +26,12 @@ modules:
     sources:
       - type: archive
         only-arches: [x86_64]
-        url: https://github.com/lumarcgames/miniball-releases/releases/download/v1.0.0/miniball.x86_64.tar.xz
-        sha256: 87becf244b8c3da0887c98338997374d6a2a6561897f88d9dc22268f79550f26
+        url: https://github.com/lumarcgames/miniball-releases/releases/download/v1.1/miniball.x86_64.tar.xz
+        sha256: ec88519c1f14cda6e283aa841e674a7868373f21c1eacee9ad99df59a4d33361
         strip-components: 0
 
       - type: archive
         only-arches: [aarch64]
-        url: https://github.com/lumarcgames/miniball-releases/releases/download/v1.0.0/miniball.arm64.tar.xz
-        sha256: 2568b7273ed8e3cbe3540e058f6a26bfd7600f9146bb3640e663db30e97f18de
+        url: https://github.com/lumarcgames/miniball-releases/releases/download/v1.1/miniball.arm64.tar.xz
+        sha256: d8301c1a3e5a1b888d019e44063eaec89aedf893c2b63c5fa9f81a452c9a91cb
         strip-components: 0
